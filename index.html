@@ -41,7 +41,7 @@
 
             <div class="quiz-nav">
                 <button id="prev-btn" class="btn">◀ 이전</button>
-                <button type="button" onclick="window.location.reload()" class="btn btn-secondary">🏠 홈으로</button>
+                <button type="button" onclick="location.href=location.href" class="btn btn-secondary">🏠 홈으로</button>
                 <button id="next-btn" class="btn">다음 ▶</button>
                 <button id="submit-btn" class="btn btn-success hidden">💯 채점하기</button>
             </div>
@@ -56,7 +56,7 @@
             
             <div class="result-actions">
                 <button id="download-pdf-btn" class="btn btn-pdf">📥 오답 PDF 다운로드</button>
-                <button id="restart-btn" onclick="window.location.reload()" class="btn btn-secondary">🔄 새 시험지 업로드 (홈으로)</button>
+                <button id="restart-btn" onclick="location.href=location.href" class="btn btn-secondary">🔄 새 시험지 업로드 (홈으로)</button>
             </div>
 
             <div id="pdf-area">
