@@ -117,11 +117,10 @@ document.getElementById('submit-btn').addEventListener('click', () => {
 
 // PDF / 리스타트
 document.getElementById('download-pdf-btn').addEventListener('click', () => { PDFGen.download('pdf-area', engine.title); });
+
+// 💡 아래 restart-btn 코드를 이 모양으로 통째로 바꾸시면 됩니다.
 document.getElementById('restart-btn').addEventListener('click', () => {
-    QuizStorage.clear();
-    resultSec.classList.add('hidden');
-    uploadSec.classList.remove('hidden');
-    fileInput.value = '';
+    location.href = location.href;
 });
 
 // 새로고침 복구 로직
