@@ -1,0 +1,15 @@
+{
+  "name": "AI Quiz 오프라인 시험장",
+  "short_name": "AI Quiz",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme-color": "#4f46e5",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/569/569801.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

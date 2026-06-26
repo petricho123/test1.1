@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Quiz 플랫폼</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4f46e5">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>📋 AI Quiz 시스템</h1>
+            <button id="theme-toggle" class="btn-theme">🌓 모드 전환</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="upload-section" class="card">
+            <h2>시험지 업로드</h2>
+            <p>Gemini가 생성한 JSON 파일을 업로드하여 시험을 시작하세요.</p>
+            <div class="file-upload-box">
+                <input type="file" id="file-input" accept=".json">
+                <label for="file-input" class="btn btn-primary">📁 JSON 파일 선택</label>
+            </div>
+        </section>
+
+        <section id="quiz-section" class="card hidden">
+            <div class="quiz-header">
+                <h2 id="quiz-title">시험 제목</h2>
+                <div class="progress-container">
+                    <div id="progress-bar"></div>
+                </div>
+                <div id="progress-text">문제 0 / 0</div>
+            </div>
+            
+            <div id="question-container">
+                </div>
+
+            <div class="quiz-nav">
+                <button id="prev-btn" class="btn">◀ 이전</button>
+                <button type="button" onclick="window.location.reload()" class="btn btn-secondary">🏠 홈으로</button>
+                <button id="next-btn" class="btn">다음 ▶</button>
+                <button id="submit-btn" class="btn btn-success hidden">💯 채점하기</button>
+            </div>
+        </section>
+
+        <section id="result-section" class="card hidden">
+            <h2>시험 결과</h2>
+            <div class="score-board">
+                <div id="total-score" class="score-text">0점</div>
+                <p id="score-summary">맞은 개수: 0 / 틀린 개수: 0</p>
+            </div>
+            
+            <div class="result-actions">
+                <button id="download-pdf-btn" class="btn btn-pdf">📥 오답 PDF 다운로드</button>
+                <button id="restart-btn" onclick="window.location.reload()" class="btn btn-secondary">🔄 새 시험지 업로드 (홈으로)</button>
+            </div>
+
+            <div id="pdf-area">
+                <h3 class="wrong-title">❌ 오답 분석 노트</h3>
+                <div id="incorrect-answers-container">
+                    </div>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
